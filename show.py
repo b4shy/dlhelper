@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from read import read_images
 
 
 class Show:
@@ -34,8 +33,3 @@ class Show:
                 elif self.labels:
                     axis[i, j].set_title(self.labels[ind])
         plt.show()
-
-
-
-imgs = read_images("data")
-Show(imgs,(2,2))

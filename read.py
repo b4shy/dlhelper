@@ -2,6 +2,7 @@ import cv2
 import os
 import numpy as np
 
+
 def read_images(path, size=(224, 224)):
     imgs = []
     for i in os.listdir(path):
