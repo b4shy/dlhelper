@@ -11,20 +11,20 @@ def show_images(imgs, plot_no, labels=None, class_mapping_dict=None):
         logger.error("plot_no has wrong type! Use a tuple")
         raise TypeError("plot_no has wrong type! Use TUPLE")
 
-    fig, axis = init_fig(plot_no)
-    show_image(plot_no, class_mapping_dict, axis, labels, imgs)
+    fig, axis = _init_fig(plot_no)
+    _show_image(plot_no, class_mapping_dict, axis, labels, imgs)
 
 
 
 
-def init_fig(plot_no):
+def _init_fig(plot_no):
     fig, axis = plt.subplots(plot_no[0], plot_no[1], squeeze=False)
     fig.set_figheight(10)
     fig.set_figwidth(10)
     return fig, axis
 
 
-def show_image(plot_no, class_mapping_dict, axis, labels, imgs):
+def _show_image(plot_no, class_mapping_dict, axis, labels, imgs):
     for i in range(plot_no[0]):
         for j in range(plot_no[1]):
             ind = np.random.randint(0, len(imgs))
