@@ -2,7 +2,7 @@ import os
 import sys
 myPath = os.path.dirname(os.path.abspath(__file__))
 print(myPath)
-sys.path.insert(0, myPath + '/../imhelper')
+sys.path.insert(0, myPath + '/../')
 
 import read
 import show
