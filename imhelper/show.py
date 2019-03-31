@@ -1,14 +1,20 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import logging
 
+logger = logging.getLogger("Show")
+logging.basicConfig(format="%(levelname)s:%(message)s", level=logging.INFO)
 
 def show_images(imgs, plot_no, labels=None, class_mapping_dict=None):
-    show_samples(plot_no, imgs, class_mapping_dict, labels)
+
+    if not type(plot_no) is tuple:
+        logger.error("plot_no has wrong type! Use a tuple")
+        raise TypeError("plot_no has wrong type! Use TUPLE")
+
+    fig, axis = init_fig(plot_no)
+    show_image(plot_no, class_mapping_dict, axis, labels, imgs)
 
 
-def show_samples(plot_no, imgs, class_mapping_dict, labels):
-        fig, axis = init_fig(plot_no)
-        show_image(plot_no, class_mapping_dict, axis, labels, imgs)
 
 
 def init_fig(plot_no):
