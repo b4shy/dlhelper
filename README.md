@@ -1,2 +1,4 @@
 # imhelper
-Methods for easy reading and plotting images for Deep Learning
+contains methods for easy imreading and plotting files. Besides that a conversion to the keras image standart structure is available
+# keras helper
+helper methods for keras (set layers to untrainable)
