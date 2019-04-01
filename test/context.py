@@ -8,3 +8,4 @@ sys.path.insert(0, myPath + '/../keras_helper')
 from show import show_images
 from read import read_images
 from misc import set_untrainable
+from structure import KerasFormatHelper

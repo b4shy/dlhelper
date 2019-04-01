@@ -1,7 +1,7 @@
 import pytest
 import os
 from context import *
-path = myPath = os.path.dirname(os.path.abspath(__file__))
+path = os.path.dirname(os.path.abspath(__file__))
 path = os.path.join(path, "data")
 imgs = read_images(path)
 
