@@ -5,6 +5,7 @@ import logging
 logger = logging.getLogger("Show")
 logging.basicConfig(format="%(levelname)s:%(message)s", level=logging.INFO)
 
+
 def show_images(imgs, plot_no, labels=None, class_mapping_dict=None):
 
     if not type(plot_no) is tuple:
@@ -13,8 +14,6 @@ def show_images(imgs, plot_no, labels=None, class_mapping_dict=None):
 
     fig, axis = _init_fig(plot_no)
     _show_image(plot_no, class_mapping_dict, axis, labels, imgs)
-
-
 
 
 def _init_fig(plot_no):
