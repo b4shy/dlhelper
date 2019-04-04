@@ -1,3 +1,5 @@
+import sys
+sys.path.append("..")
 from context import set_untrainable
 import pytest
 import tensorflow as tf

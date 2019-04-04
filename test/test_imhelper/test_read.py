@@ -1,3 +1,5 @@
+import sys
+sys.path.append("..")
 import pytest
 import os
 from context import read_images

@@ -9,8 +9,8 @@ logging.basicConfig(format="%(levelname)s:%(message)s", level=logging.INFO)
 def show_images(imgs, plot_no, labels=None, class_mapping_dict=None):
 
     if not type(plot_no) is tuple:
-        logger.error("plot_no has wrong type! Use a tuple")
-        raise TypeError("plot_no has wrong type! Use TUPLE")
+        logger.info("plot_no was no tuple! Creating tuple with (%i, %i)", plot_no, plot_no)
+        plot_no = (plot_no, plot_no)
 
     fig, axis = _init_fig(plot_no)
     _show_image(plot_no, class_mapping_dict, axis, labels, imgs)

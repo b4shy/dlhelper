@@ -1,3 +1,5 @@
+import sys
+sys.path.append("..")
 from context import KerasFormatHelper
 import os
 import shutil
